@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>常見問題 | 萬惡之源</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
+      color: #00ffff;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    nav {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 255, 255, 0.05);
+      box-shadow: 0 2px 10px rgba(0,255,255,0.1);
+    }
+    nav a {
+      margin: 0 20px;
+      color: #00ffff;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,255,255,0.08);
+      backdrop-filter: blur(6px);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+      text-shadow: 0 0 12px #00ffffaa;
+    }
+    details {
+      background: rgba(0, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    details[open] {
+      background: rgba(0, 255, 255, 0.25);
+      box-shadow: 0 0 15px #00ffffaa;
+    }
+    summary {
+      font-size: 1.3rem;
+      font-weight: 700;
+      outline: none;
+      user-select: none;
+    }
+    summary:hover {
+      color: #ffffff;
+    }
+    details p {
+      margin-top: 10px;
+      font-weight: 500;
+      color: #ccffff;
+    }
+    /* RWD for mobile */
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px 15px;
+        padding: 15px;
+      }
+      summary {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<script>
+  if (localStorage.getItem('authenticated') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
+
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="fain.html">投稿區</a>
+    <a href="privacy.html">隱私權條款</a>
+    <a href="terms.html">使用者條款</a>
+    <a href="nobe.html">常見問題</a>
+  </nav>
+
+  <div class="container">
+    <h1>常見問題 (FAQ)</h1>
+
+    <details>
+      <summary>1. 這個網站是做什麼的？</summary>
+      <p>本站提供一個匿名分享與瀏覽資金圖的安全平台，所有投稿均保密處理，保障使用者隱私。</p>
+    </details>
+
+    <details>
+      <summary>2. 投稿內容會不會被公開個資？</summary>
+      <p>不會。我們承諾不會公開任何投稿者的個人資料，除非有合法司法要求。</p>
+    </details>
+
+    <details>
+      <summary>3. 如何加入賴群？</summary>
+      <p>點擊首頁的「加入賴群」連結，即可加入，目前群組人數有限，請儘速行動。</p>
+    </details>
+
+    <details>
+      <summary>4. 投稿流程是什麼？</summary>
+      <p>加入我們客服賴:@617qiokz後 告知要公開的家族資金圖圖片及族長遊戲名稱 客服將協助您上傳</p>
+    </details>
+
+    <details>
+      <summary>5. 網站是否會收集我的瀏覽資料？</summary>
+      <p>本網站僅統計瀏覽次數，不追蹤個人行為或使用 Cookie，完全匿名。</p>
+    </details>
+
+    <details>
+      <summary>6. 若遇到問題，可以怎麼聯絡？</summary>
+      <p>可以聯繫我們的客服賴:@617qiokz</p>
+    </details>
+
+    <details>
+      <summary>7. 如果人滿了還有辦法加入嗎</summary>
+      <p>人數有限人數到了後會取決於響應是否增加更多人數</p>
+    </details>
+
+    <details>
+      <summary>8. 有辦法加入我們嗎</summary>
+      <p>我們目前招收大量成員 若想當客服可以私訊我們客服賴:@617qiokz</p>
+    </details>
+    <details>
+      <summary>9. 上面的圖片都是真的嗎</summary>
+      <p>我們客服會簡單的判斷但具體需自行核實 這邊不負責任何責任</p>
+    </details>
+  </div>
+</body>
+</html>

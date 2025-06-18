@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>隱私權條款 | 完全保密</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
+      color: #00ffff;
+      line-height: 1.7;
+    }
+
+    nav {
+      text-align: center;
+      padding: 20px;
+      font-size: 1.1rem;
+      background-color: rgba(0, 255, 255, 0.05);
+      box-shadow: 0 2px 10px rgba(0,255,255,0.1);
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #00ffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,255,255,0.08);
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff88;
+      padding-top: 30px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 30px;
+      border-bottom: 1px solid #00ffff33;
+      padding-bottom: 8px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #00aaaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+<script>
+  if (localStorage.getItem('authenticated') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
+
+
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="fain.html">投稿區</a>
+    <a href="privacy.html">隱私權條款</a>
+    <a href="terms.html">使用者條款</a>
+    <a href="nobe.html">常見問題</a>
+  </nav>
+
+  <div class="container">
+    <h1>🔐 隱私權條款</h1>
+
+    <p>我們重視您的隱私與資訊安全，以下條款說明我們如何處理您與平台之間的互動資料：</p>
+
+    <h2>1. 資料收集政策</h2>
+    <ul>
+      <li>本網站不會主動蒐集個人身份資料（如姓名、手機、IP）。</li>
+      <li>投稿內容皆以匿名方式提交，不會與您個人資訊連結。</li>
+    </ul>
+
+    <h2>2. 投稿保密原則</h2>
+    <ul>
+      <li>您所提供的圖像、文字等資訊，僅供展示與匿名分享。</li>
+      <li>不會轉交、販售或透露給任何第三方，除非法律強制要求。</li>
+      <li>我們不會主動核實投稿真實性，使用者須自行判斷。</li>
+    </ul>
+
+    <h2>3. 第三方連結聲明</h2>
+    <ul>
+      <li>網站提供之外部連結（如 LINE 群組），其平台隱私條款請另行參閱。</li>
+    </ul>
+
+    <h2>4. 瀏覽行為紀錄</h2>
+    <ul>
+      <li>網站僅紀錄總瀏覽次數，作為人氣統計，並不綁定使用者身份。</li>
+      <li>本平台不使用 Cookie 或任何追蹤用戶個人行為的技術。</li>
+    </ul>
+
+    <h2>5. 條款更新</h2>
+    <ul>
+      <li>若有任何變更，將更新於本頁面，恕不另行通知。</li>
+    </ul>
+
+    <p style="margin-top: 25px; font-weight: bold; color: #00ffcc;">
+      使用本網站即表示您已閱讀、理解並同意上述隱私政策。
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 完全保密 All rights reserved.
+  </footer>
+
+</body>
+</html>

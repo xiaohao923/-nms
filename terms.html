@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>使用者條款</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffff;
+      background: #000;
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    nav {
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #00ffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px #00ffff88;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      color: #00e6e6;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 0.95rem;
+      color: #ccffff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+<script>
+  if (localStorage.getItem('authenticated') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
+
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="fain.html">投稿區</a>
+    <a href="privacy.html">隱私權條款</a>
+    <a href="terms.html">使用者條款</a>
+    <a href="nobe.html">常見問題</a>
+  </nav>
+
+  <main>
+    <h1>使用者條款</h1>
+
+    <h2>1. 服務簡介</h2>
+    <p>本網站提供用戶匿名分享資訊圖像、文字內容等功能，強調保密與隱私，但不為用戶的行為承擔法律責任。</p>
+
+    <h2>2. 使用限制</h2>
+    <p>嚴禁上傳任何違法、色情、暴力、釣魚、詐騙、侵害他人權益之內容。一經發現，將永久封鎖並依法處理。</p>
+
+    <h2>3. 用戶責任</h2>
+    <p>所有上傳行為皆由使用者自行承擔，網站不負責驗證或篩選內容來源。使用者應確保內容真實且無侵犯第三方權益。</p>
+
+    <h2>4. 系統風險與免責聲明</h2>
+    <p>本平台已盡可能保護資料安全，惟無法保證100%不受攻擊。若因天災、技術故障、人為疏失造成資料外洩，平台不承擔賠償責任。</p>
+
+    <h2>5. 條款修改</h2>
+    <p>我們保留隨時修改本條款之權利。使用者須定期查閱以確認自身權益。繼續使用即表示接受修改內容。</p>
+
+    <footer>
+      © 2025 完全保密 | 保留所有權利
+    </footer>
+  </main>
+
+  <!-- 背景特效 -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x00ffff,
+      backgroundColor: 0x000000,
+      points: 14.00,
+      maxDistance: 24.00,
+      spacing: 18.00
+    })
+  </script>
+</body>
+</html>

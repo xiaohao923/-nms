@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>登入頁面</title></head>
+<body>
+  <h1>登入</h1>
+  <input type="password" id="password" placeholder="請輸入密碼">
+  <button onclick="login()">登入</button>
+  <p id="msg"></p>
+
+  <script>
+    async function login() {
+      const password = document.getElementById('password').value;
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password })
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        localStorage.setItem('authenticated', 'true');
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('msg').innerText = data.message;
+      }
+    }
+  </script>
+</body>
+</html>

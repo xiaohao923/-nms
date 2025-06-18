@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>VIP 方案｜萬惡之源</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 100%);
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #00f0ff;
+      text-shadow: 0 0 10px #00f0ff;
+      font-size: 2.5rem;
+      margin-top: 4rem;
+    }
+    .notice {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #ffcc00;
+      margin-top: -1rem;
+      text-shadow: 0 0 5px #ffaa00;
+    }
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00f0ff;
+      border-radius: 15px;
+      padding: 2rem;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 20px #00f0ff44;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #00f0ffaa;
+    }
+    .price {
+      font-size: 2rem;
+      color: #00f0ff;
+      margin: 1rem 0;
+      text-shadow: 0 0 5px #00f0ff;
+    }
+    .card-title {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .features {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .button {
+      background: #00f0ff;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #00c0dd;
+    }
+    .back-home {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #00f0ff;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00f0ff;
+      transition: background 0.3s;
+      z-index: 1000;
+    }
+    .back-home:hover {
+      background-color: #00c0dd;
+    }
+  </style>
+</head>
+<body>
+<script>
+  if (localStorage.getItem('authenticated') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
+
+
+  <!-- 回到主頁按鈕 -->
+  <a class="back-home" href="/index.html">← 回到主頁</a>
+
+  <!-- 標題與說明 -->
+  <h1>VIP 會員方案</h1>
+  <p class="notice">若需要購買請至 <strong>LINE</strong> 留下要購買的方案名稱 🧾</p>
+
+  <!-- VIP 卡片列表 -->
+  <div class="pricing-container">
+    <div class="card">
+      <div class="card-title">初級會員｜新手村來這裡</div>
+      <div class="price">NT$ 100 / 月</div>
+      <div class="features">
+        ✅ 每月 5 次 問題協助<br>
+        📞 客服優先回覆<br>
+        🗝️ 解鎖基礎功能體驗
+      </div>
+      <a class="button" href="https://lin.ee/Xo5TkF8" target="_blank">選擇初級方案</a>
+    </div>
+
+    <div class="card" style="border-color:#ff00ff; box-shadow:0 0 20px #ff00ff44;">
+      <div class="card-title">中級會員｜問題解決力+50%</div>
+      <div class="price">NT$ 350 / 月</div>
+      <div class="features">
+        🚀 每月 20 次 專屬諮詢，日常難題一次搞定<br>
+        💬 客服協助解答進階/特殊需求（不用怕問太深）<br>
+        🧩 支援進階功能專屬每月建議
+      </div>
+      <a class="button" style="background:#ff00ff;" href="https://lin.ee/Xo5TkF8" target="_blank">選擇中級方案</a>
+    </div>
+
+    <div class="card">
+      <div class="card-title">終極會員｜核心啟動</div>
+      <div class="price">NT$ 1650 / 月</div>
+      <div class="features">
+        ♾️ 每月無限提問權限，想問就問<br>
+        🎙️ 客服可根據你的風格偏好客製回覆（專業/幽默/霸道⋯等）<br>
+        👑 專屬身份徽章 + 解鎖未來所有功能與隱藏工具
+        
+      </div>
+      <a class="button" href="https://lin.ee/Xo5TkF8" target="_blank">加入終極會員</a>
+    </div>
+  </div>
+
+</body>
+</html>

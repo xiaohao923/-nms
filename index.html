@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>萬惡之源</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffff;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: #000;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    nav {
+      text-align: center;
+      padding: 20px;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: #00ffff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      text-shadow: 0 0 15px #00ffffaa;
+    }
+
+    .discord-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      color: #000;
+      background-color: #00ffff;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .discord-link:hover {
+      background-color: #00cccc;
+      box-shadow: 0 0 20px #00ffffaa;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #00ffff88;
+      padding-bottom: 8px;
+    }
+
+    .views {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+
+    .views span {
+      color: #ffffff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<script>
+  if (localStorage.getItem('authenticated') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
+
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="fain.html">投稿區</a>
+    <a href="privacy.html">隱私權條款</a>
+    <a href="terms.html">使用者條款</a>
+    <a href="nobe.html">常見問題</a>
+  </nav>
+
+  <header>
+    <h1>完全保密的資金圖獲取地</h1>
+    <a href="https://line.me/ti/g2/DhHSZpyW5FBQ-hzAki0k3dBv_1FgDhZuZncHGQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" class="discord-link">加入賴群 🔒</a>
+    <a href="https://lin.ee/XvEc437" target="_blank" class="discord-link">聯繫客服 🔒</a>
+  </header>
+
+  <section>
+    <h2>萬惡之源</h2>
+    <p>想背骨？想外流家族？</p>
+    <p>想投稿可以加入賴群，這裡完全保密。</p>
+    <p>不在乎你是大家族?還是小家族你敢給我我敢上傳</p>
+    <p>這邊專門外流資金圖想加入我們?</p>
+    <p>目前群組只開放200人進入 之後網頁會開啟密碼驗證</p>
+    <p>這可能是你第一次看到也可能是你的最後一次</p>
+    <p>服務唯一宗旨 你敢提供我敢上傳</p>
+    <p>⬆️以上為我們唯一標準</p>
+  </section>
+
+  <div class="views">🔥 已有 <span id="viewCount">載入中...</span> 次訪問</div>
+
+  <!-- Vanta.js 背景 -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x00ffff,
+      backgroundColor: 0x000000,
+      points: 14.00,
+      maxDistance: 24.00,
+      spacing: 18.00
+    })
+  </script>
+
+  <!-- 瀏覽次數 JS -->
+  <script>
+    (async () => {
+      const binId = '6831d0a38561e97a501aed41';
+      const apiKey = '$2a$10$rUTs2dmXhZK3L31uvEbzH.dh9A2kIdYTwfQF3JG/LejqcXbfttTlK';
+      const url = `https://api.jsonbin.io/v3/b/${binId}`;
+      const viewElement = document.getElementById('viewCount');
+
+      try {
+        const getRes = await fetch(`${url}/latest`, {
+          headers: { 'X-Master-Key': apiKey }
+        });
+        const data = await getRes.json();
+        const currentViews = data.record.views || 0;
+        const newViews = currentViews + 1;
+        viewElement.textContent = newViews.toLocaleString();
+
+        await fetch(url, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Master-Key': apiKey
+          },
+          body: JSON.stringify({ views: newViews })
+        });
+      } catch (error) {
+        console.error('讀取失敗:', error);
+        viewElement.textContent = '⚠ 載入失敗';
+      }
+    })();
+  </script>
+</body>
+</html>
