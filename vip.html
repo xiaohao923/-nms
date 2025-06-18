@@ -104,6 +104,11 @@
     window.location.href = 'login.html';
   }
 </script>
+<script>
+  if (localStorage.getItem('authenticated') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
 
 
   <!-- 回到主頁按鈕 -->
