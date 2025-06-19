@@ -25,26 +25,27 @@
     <p id="msg"></p>
   </div>
   <script>
-    function login() {
-      const pw = document.getElementById('password').value;
-      fetch('/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password: pw })
-      })
-      .then(res => {
-        if (res.status === 200) {
-          document.cookie = "auth=true; path=/";
-          const target = sessionStorage.getItem('redirectAfterLogin') || 'index.html';
-          window.location.href = target;
-        } else {
-          document.getElementById('msg').innerText = '密碼錯誤 ❌';
-        }
-      })
-      .catch(() => {
-        document.getElementById('msg').innerText = '連線失敗，請重試';
-      });
-    }
-  </script>
+  function login() {
+    const password = document.getElementById('password').value;
+    fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password })
+    })
+    .then(res => {
+      if (res.status === 200) {
+        document.cookie = "auth=true; path=/";
+        const target = sessionStorage.getItem('redirectAfterLogin') || "index.html";
+        window.location.href = target;
+      } else {
+        document.getElementById('msg').innerText = '密碼錯誤 ❌';
+      }
+    })
+    .catch(err => {
+      document.getElementById('msg').innerText = '伺服器錯誤 ❌';
+      console.error(err);
+    });
+  }
+</script>
 </body>
 </html>
