@@ -96,7 +96,6 @@
   </div>
 
   <script>
-    // 登入函式
     function login() {
       const pw = document.getElementById('password').value;
       fetch('/api/login', {
@@ -106,9 +105,7 @@
       })
       .then(res => {
         if (res.status === 200) {
-          // 設定登入 cookie
           document.cookie = "auth=true; path=/";
-          // 讀出要導回的原始頁面，若沒有就回首頁
           const target = sessionStorage.getItem('redirectAfterLogin') || 'index.html';
           window.location.href = target;
         } else {
@@ -119,9 +116,6 @@
         document.getElementById('msg').innerText = '連線失敗，請重試';
       });
     }
-
-    // 如果從保護頁面導過來，sessionStorage 已經儲存了 redirectAfterLogin
-    // 不需其他程式碼
   </script>
 </body>
 </html>
